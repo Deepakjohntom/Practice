@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: rgb(161, 137, 102);
+  overflow: hidden;
+}
+.wrapper {
+  width: 100%;
+  margin: 130px auto;
+  max-width: 700px;
+  background-color: white;
+  padding: 25px 30px 30px 30px;
+  border-radius: 10px;
+}
+
+.wrapper header {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.wrapper nav {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 80%;
+  height: 50px;
+}
+
+.wrapper nav label {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  color: rgb(69, 189, 226);
+  font-size: 17px;
+  position: relative;
+  z-index: 1;
+}
+.wrapper nav label i {
+  padding-right: 7px;
+}
+
+.wrapper nav .slider {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background-color: rgb(69, 189, 226);
+  border-radius: 10px;
+  z-index: 0;
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s ease;
+}
+
+#blogge:checked ~ nav .slider {
+  left: 20%;
+}
+#code:checked ~ nav .slider {
+  left: 40%;
+}
+#help:checked ~ nav .slider {
+  left: 60%;
+}
+#user:checked ~ nav .slider {
+  left: 80%;
+}
+
+#home:checked ~ nav label.home,
+#blogge:checked ~ nav label.blogge,
+#code:checked ~ nav label.code,
+#help:checked ~ nav label.help,
+#user:checked ~ nav label.user {
+  color: #fff;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+/* content css */
+
+section .content .title {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 30px 0 10px 0;
+}
+
+section .content {
+  display: none;
+}
+#home:checked ~ section .content-1 {
+  display: block;
+}
+#blogge:checked ~ section .content-2 {
+  display: block;
+}
+#code:checked ~ section .content-3 {
+  display: block;
+}
+#help:checked ~ section .content-4 {
+  display: block;
+}
+#user:checked ~ section .content-5 {
+  display: block;
+}
