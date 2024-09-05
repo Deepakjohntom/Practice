@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  place-content: center;
+}
+
+.skillbar {
+  width: 600px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  background-color: aqua;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.2);
+}
+
+.skillbar .bar {
+  margin: 20px 0;
+}
+
+.skillbar .bar:first-child {
+  margin-top: 0px;
+}
+
+.skillbar .bar .info {
+  margin-bottom: 5px;
+}
+
+.skillbar .bar .info span {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.skillbar .bar .progress-lin {
+  height: 10px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+  position: relative;
+  transform: scale(0);
+  transform-origin: left;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+@keyframes animate {
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bar .progress-lin span {
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  background: #6665ee;
+  border-radius: 10px;
+  transform: scale(0);
+  transform-origin: left;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.progress-lin.html span {
+  width: 90%;
+}
+
+.progress-lin.css span {
+  width: 60%;
+}
+
+.progress-lin.ui span {
+  width: 80%;
+}
+
+.progress-lin.py span {
+  width: 40%;
+}
+
+.skillbar .progress-lin span::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  right: 0;
+  top: -10px;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+}
+
+.skillbar .progress-lin span::after {
+  position: absolute;
+  background: #000;
+  color: #fff;
+  right: 0;
+  top: -25px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 1px 8px;
+  border-radius: 3px;
+}
+
+.progress-lin.html span::after {
+  content: "90%";
+}
+
+.progress-lin.css span::after {
+  content: "60%";
+}
+
+.progress-lin.ui span::after {
+  content: "80%";
+}
+
+.progress-lin.py span::after {
+  content: "40%";
+}
