@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: url(bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.container {
+  perspective: 100px;
+}
+/* Runway */
+.runway {
+  width: 170px;
+  height: 830px;
+  background-color: black;
+  margin: 30px auto;
+  position: relative;
+  box-shadow: 5px 0px 0px #383838, -5px 0px 0px #383838;
+  transform: rotateX(75deg);
+}
+
+.runway::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 5px;
+  height: 100%;
+  background-color: white;
+  transform: translateX(70px);
+}
+
+.runway::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 5px;
+  height: 100%;
+  background-color: white;
+  transform: translateX(-70px);
+}
+
+.runway span {
+  display: block;
+  position: absolute;
+  left: 50%;
+  height: 100%;
+  width: 5px;
+  border: 4px dashed white;
+}
+
+/* Plane */
+
+.plane {
+  width: 570px;
+  position: absolute;
+  top: -80px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+  transform: scale(0.3);
+  animation: takeoff 16s linear 3s forwards, landing 12s linear 18s forwards;
+}
+
+@keyframes takeoff {
+  0% {
+    transform: translateY(0px) scale(0.3);
+  }
+  25% {
+    transform: translateY(20px) scale(0.7);
+  }
+  60% {
+    transform: translateZ(80px) scale(0.8);
+  }
+  90% {
+    transform: translateZ(100px) rotateZ(20deg) scale(0.9);
+  }
+  100% {
+    transform: translateZ(200px) scale(1);
+  }
+}
+
+@keyframes landing {
+  0% {
+    transform: translateY(-40px) scale(0.1);
+  }
+  100% {
+    transform: translateY(-10px) scale(1.8);
+  }
+}
+
+.herder-section {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  color: rgb(0, 23, 32);
+}
+
+.herder-section .menu {
+  display: flex;
+  justify-content: space-evenly;
+}
+.herder-section ul li {
+  list-style: none;
+  cursor: pointer;
+  margin: 0 10px;
+}
+.logo {
+  font-size: 30px;
+  cursor: pointer;
+}
