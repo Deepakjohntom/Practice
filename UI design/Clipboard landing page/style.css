@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+:root {
+  --Cyan: hsl(171, 66%, 44%);
+  --Blue: hsl(233, 100%, 69%);
+  --btn-border-Cyan: hsl(171, 66%, 44%);
+  --btn-border-Blue: hsl(233, 100%, 69%);
+  --btn-shadow-Cyan: hsla(171, 66%, 44%, 0.5);
+  --btn-shadow-Blue: hsla(233, 100%, 69%, 0.5);
+  --footer-bg: hsl(220, 18%, 97%);
+  --neutral-dark_Blue: hsl(210, 10%, 33%);
+  --neutral-dark_Blue50: hsl(210, 10%, 50%);
+  --neutral-Blue: hsl(201, 11%, 66%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
