@@ -21,4 +21,167 @@
 
 a {
   text-decoration: none;
+  cursor: pointer;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Bai Jamjuree";
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 70px;
+  background: url(images/bg-header-desktop.png);
+  background-size: cover;
+}
+
+.intro {
+  text-align: center;
+  padding: 10px 0;
+  width: 40%;
+}
+
+.intro h2 {
+  padding: 5px 0;
+}
+
+.action_button {
+  padding: 20px 0;
+}
+
+.action_button button {
+  padding: 10px 25px;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  margin: 0 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.action_button button.ios {
+  background-color: var(--Cyan);
+  box-shadow: 2px 2px 8px var(--Cyan), 2px 2px 2px var(--Cyan);
+}
+
+.action_button button.mac {
+  background-color: var(--Blue);
+  box-shadow: 2px 2px 8px var(--Blue), 2px 2px 2px var(--Blue);
+}
+
+.one {
+  text-align: center;
+  width: 45%;
+  margin: auto;
+}
+
+.one h3 {
+  padding: 15px 0;
+}
+
+.two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 50px 0;
+}
+
+.two img {
+  height: 100%;
+  width: 80%;
+}
+
+.two .features div {
+  margin-top: 40px;
+  width: 65%;
+}
+
+.three {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.three span {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.three img {
+  height: 100%;
+  width: 80%;
+  margin: 40px 0;
+}
+
+.three div:first-child {
+  padding: 70px 0;
+  width: 65%;
+  margin: auto;
+}
+
+.four .function {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+  text-align: center;
+}
+
+.four .function div {
+  width: 26%;
+  margin: 0 30px;
+}
+
+.four .function div img {
+  margin: 10px 0 20px 0;
+}
+
+.four .support_companys {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  margin: 50px 30px;
+}
+
+.five {
+  text-align: center;
+  width: 46%;
+  margin: auto;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  align-items: center;
+}
+
+.foot .logo {
+  width: 30%;
+  height: 50%;
+  margin: 0 70px;
+}
+
+.foot ul {
+  list-style: none;
+  max-width: 400px;
+}
+
+ul li {
+  display: inline-block;
+  margin: 5px 20px;
+}
+
+a {
+  color: var(--Cyan);
+}
+
+footer .social_link a {
+  margin: 0 20px;
 }
